@@ -9,11 +9,14 @@
     /* main */
     header{
         text-align: center;
+        background-color: rgb(243, 243, 243);
     }
     header img{
         vertical-align: bottom;
         height: 470px;
-        object-fit: cover;
+        object-fit: contain;
+        background-color: #111;
+        border-top: 4px solid gold;
     }
     .header-box{
         border-top: 5px solid  gold;
@@ -24,6 +27,7 @@
     .main{
         display: flex;
         justify-content: space-around;
+        background-color: rgb(243, 243, 243);
     }
     article{
         flex: 3;
@@ -38,7 +42,8 @@
     }
     h2{
         color: #fff;
-        background-color: rgb(0, 195, 255);
+        background-color: #AA0000;
+        /* border: 4px solid gold; */
         border-radius: 8px;
         padding: 12px 24px;
         font-size: 1.7rem;
@@ -53,7 +58,7 @@
     }
     p{
         font-size: 1.0rem;
-        line-height: 1.7;
+        line-height: 2.0;
     }
     aside{
         flex: 1;
@@ -63,7 +68,7 @@
         /* description */
         .description-box{
             display: flex;
-            text-align: center;
+            /* text-align: center; */
             
         }
         .description-box-img{
@@ -79,8 +84,8 @@
 
 
 
-        .overview, .price{
-
+        .description-box-text h3{
+            text-align: center;
         } 
         .access, .contact, .footer, .overview h2, .price h2{
             text-align: center;
@@ -89,8 +94,42 @@
         /* aside */
         .box{
             border-radius: 8px;
-            border: 2px solid  gold;
+            border: 4px solid gold;
             padding: 18px;
+        }
+        /* contact */
+        .contact p{
+            /* text-align: left; */
+        }
+        .contact-form{
+            margin-bottom: 12px;
+        }
+        .contact-form-text{
+            margin: 3px;
+        }
+        .contact-textform{
+            border: none;
+            border-radius: 8px;
+            padding: 6px;
+            margin-top: 6px;
+            width: 200px;
+        }
+        .contact-button{
+            background-color: #000;
+            color: #fff;
+            font-weight: bold;
+            padding: 12px;
+            width: 200px;
+            border: none;
+            border-radius: 8px;
+        }
+        .contact-select{
+            margin: 12px;
+        }
+
+        /* access */
+        .access iframe{
+            margin-top: 12px;
         }
 
         /* footer */
@@ -116,13 +155,13 @@
         <section>
             <h2>航空客室乗務員検定とは</h2>
             <div class="description-box">
-                <img class="description-box-img" src="https://s3-ap-northeast-1.amazonaws.com/s3.peraichi.com/userData/5b491efe-be24-460d-8b90-793a0a0000fe/img/5e1bf6764494f/original.jpg" alt="">
+                <img class="description-box-img" src="https://s3-ap-northeast-1.amazonaws.com/s3.peraichi.com/userData/5b491efe-be24-460d-8b90-793a0a0000fe/img/5e9851791c539/original.jpg" alt="">
                 <div class="description-box-text">
-                    <h3>客室乗務員の知識と技能が習得できる</h3>
+                    <h3>客室乗務員の知識と技能が<br>習得できる</h3>
                     <p class="box">一般社団法人全国航空雇用促進協会が発行する資格です。<br>
-                        客室乗務員の知識と技能を習得することで、<br>
-                        客室乗務員の業務や立ち居振る舞い、<br>
-                        マナーを学べるだけでなく、<br>
+                        客室乗務員の知識と技能を習得することで、
+                        客室乗務員の業務や立ち居振る舞い、
+                        マナーを学べるだけでなく、
                         就職アピールにも活用することもできます。</p>
                 </div>
             </div>
@@ -134,10 +173,10 @@
                     ・客室乗務員に憧れている<br>
                     ・飛行機が大好き</p>
                     </div>
-                <img class="description-box-img" src="https://s3-ap-northeast-1.amazonaws.com/s3.peraichi.com/userData/5b491efe-be24-460d-8b90-793a0a0000fe/img/5e1bf6764494f/original.jpg" alt="">
+                <img class="description-box-img" src="https://s3-ap-northeast-1.amazonaws.com/s3.peraichi.com/userData/5b491efe-be24-460d-8b90-793a0a0000fe/img/5e8c6a61586ec/original.jpg" alt="">
             </div>
             <div class="description-box">
-                <img class="description-box-img" src="https://s3-ap-northeast-1.amazonaws.com/s3.peraichi.com/userData/5b491efe-be24-460d-8b90-793a0a0000fe/img/5e1bf6764494f/original.jpg" alt="">
+                <img class="description-box-img" src="https://s3-ap-northeast-1.amazonaws.com/s3.peraichi.com/userData/5b491efe-be24-460d-8b90-793a0a0000fe/img/5e9884bd772bd/original.jpg" alt="">
                 <div class="description-box-text">
                     <h3>試験勉強の方法</h3>
                     <p class="box"> 航空客室乗務員検定の試験は自主学習となります。<br>
@@ -175,9 +214,10 @@
         <section class="price">
             <h2>料金</h2>
             <p class="box">受験料：13,000円(税別）<br>
-                
                 更新：1年毎　更新料5,000円(税別）<br>
-                
+                1級：学科と実技　10,000円(税別） 講座○分○円(税別）<br>
+                2級：学科のみ　5,000円(税別）　講座○分○円(税別）<br>
+
                 申し込み：講師手配の為、30日以降先の試験日をご指定の上、銀行振り込みでお願いします。<br>
                 
                 合格発表：試験後1週間以内にメールでご連絡します。<br>
@@ -191,33 +231,42 @@
         <section class="contact">
             <div>
                 <h2>お申し込み</h2>
-                <p>銀座オフィスで無料説明会を<br>
-                    開催しています。<br>
+                <p>銀座オフィスで無料説明会を
+                    開催しています。
                     お気軽にお問い合わせをください。
                     </p>
                     <p>電話で予約する・問い合わせる<br>
                         03-3502-1412</p>
                     <p>✉info@koyou-sokushin.net</p>
-                    <div class="box">
-                    <p>テキスト</p>
-                    <input type="text"><br>
-                    <p>テキスト</p>
-                    <input type="text"><br>
-                    <p>テキスト</p>
-                    <input type="text"><br>
-                    <p>テキスト</p>
-                    <input type="text"><br>
-                    <input type="submit" value="送信する">
+                    <div class="box contact-form">
+                    <p class="contact-form-text">お名前</p>
+                    <input class="contact-textform" type="text"><br>
+                    <p class="contact-form-text">住所</p>
+                    <input class="contact-textform" type="text"><br>
+                    <p class="contact-form-text">生年月日</p>
+                    <input class="contact-textform" type="text"><br>
+                    <p class="contact-form-text">電話番号</p>
+                    <input class="contact-textform" type="text"><br>
+                    <p class="contact-form-text">メールアドレス</p>
+                    <input class="contact-textform" type="text"><br>
+                    <div class="contact-select">
+                    <input type="radio" name="select" value="" checked="checked">1級<br>
+                    <input type="radio" name="select" value="">2級<br>
+                    <input type="radio" name="select" value="">一発<br>
+                    <input type="radio" name="select" value="">講座<br>
+                    </div>
+                    <a href=""><input class="contact-button" type="submit" value="送信する"></a>
                 </div>
             </div>
         </section>
         <section class="access">
             <h2>一般社団法人<br>
-                全国航空雇用促進協会</h2>
+                全国航空雇用<br>
+                促進協会</h2>
                 <iframe style="width: 200px; height: 200px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.3237966645047!2d139.76268551525848!3d35.66902838019711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be7471c7f75%3A0x8f71c5ac335ba62!2z44CSMTA0LTAwNjEg5p2x5Lqs6YO95Lit5aSu5Yy66YqA5bqn77yW5LiB55uu77yR77yT4oiS77yR77yW!5e0!3m2!1sja!2sjp!4v1615170523465!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <p>東京都中央区銀座6-13-16
+                <p>東京都中央区銀座6-13-16<br>
                     銀座WallビルUCF501</p>
-                    <p>銀座オフィス東銀座駅から徒歩2分</p>
+                    <p>銀座オフィス東銀座駅から<br>徒歩2分</p>
         </section>
     
     </aside>
